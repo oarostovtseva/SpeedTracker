@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         }
-        startStopButton.layer.cornerRadius = 40
+        startStopButton.layer.cornerRadius = startStopButton.frame.size.width / 2
 
         locationManager.delegate = self
         resultTableView.dataSource = self
@@ -106,7 +106,7 @@ extension ViewController: CLLocationManagerDelegate {
                     speed = 0.0
                 }
                 self.speedManager.updateCurrentSpeed(newSpeed: speed)
-                let speedText = String(format: "%.1f", location.speed)
+                let speedText = String(format: "%.1f", speed)
                 // print(speedText)
                 self.speedLabel.text = speedText
             }
