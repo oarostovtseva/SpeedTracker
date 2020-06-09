@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ImG-1L-cFZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -22,21 +22,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L9G-aC-ULL" userLabel="SpeedStackView">
-                                <rect key="frame" x="132" y="64" width="150" height="200"/>
+                                <rect key="frame" x="132" y="108" width="150" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="60" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4m-lg-piY" userLabel="Speed">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="140"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="160" id="cGv-cM-BMe"/>
+                                            <constraint firstAttribute="height" constant="140" id="cGv-cM-BMe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="120"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylE-oO-FOB">
-                                        <rect key="frame" x="47.5" y="160" width="55.5" height="40"/>
+                                        <rect key="frame" x="47.5" y="140" width="55.5" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="cFj-3D-CKy"/>
+                                            <constraint firstAttribute="height" constant="30" id="cFj-3D-CKy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rOy-M1-R2t" userLabel="TimeStackView">
-                                <rect key="frame" x="57" y="299" width="300" height="66"/>
+                                <rect key="frame" x="57" y="313" width="300" height="66"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FLN-n0-xMb" userLabel="Time">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -150,7 +150,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-yb-tx7">
-                                <rect key="frame" x="20" y="395" width="374" height="337"/>
+                                <rect key="frame" x="20" y="409" width="374" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,6 +171,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dZ5-ce-yFG">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="iuk-Az-jTY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hRN-6g-qdV" userLabel="Settings">
+                                <rect key="frame" x="318" y="5" width="76" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="Ecf-7E-PHa" kind="show" id="XvE-fi-PXy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="hourLabel" destination="3Hj-CK-0pp" id="9NJ-qf-YiC"/>
                         <outlet property="milliSecLabel" destination="Qek-x7-NtW" id="6be-Em-YAw"/>
@@ -182,6 +196,65 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="130.58035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LQR-bt-EQC">
+            <objects>
+                <viewController id="Ecf-7E-PHa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MkG-HD-E6r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track increase km/h:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gc6-MY-CJv">
+                                <rect key="frame" x="127.5" y="118" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47z-zy-sWX">
+                                <rect key="frame" x="132" y="159" width="150" height="34"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RFE-6J-8PH"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="47z-zy-sWX" firstAttribute="centerX" secondItem="MkG-HD-E6r" secondAttribute="centerX" id="MRk-dy-I8l"/>
+                            <constraint firstItem="47z-zy-sWX" firstAttribute="top" secondItem="Gc6-MY-CJv" secondAttribute="bottom" constant="20" id="ZRF-Ah-6Bg"/>
+                            <constraint firstItem="Gc6-MY-CJv" firstAttribute="centerX" secondItem="MkG-HD-E6r" secondAttribute="centerX" id="cND-HV-Hnq"/>
+                            <constraint firstItem="Gc6-MY-CJv" firstAttribute="top" secondItem="EhQ-c6-Cxg" secondAttribute="top" constant="30" id="iXi-5M-amY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EhQ-c6-Cxg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kv4-mC-dsi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIG-px-sRo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.5797101449277" y="125.89285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ZZ-zv-V7F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ImG-1L-cFZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UW2-HV-bLF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0DI-nJ-2vw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ww8-ey-d6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="130.58035714285714"/>
         </scene>
