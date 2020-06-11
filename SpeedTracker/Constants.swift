@@ -10,7 +10,7 @@ import CoreLocation
 import Foundation
 
 struct K {
-    static let oneMs = 0.001
+    static let tenMs = 0.01
     
     static let startText = "START"
     static let stopText = "STOP"
@@ -18,5 +18,7 @@ struct K {
     static let resultNibName = "ResultCell"
     static let reusableCellIdentifier = "ReusableCell"
 
-    static let speedRecord: CLLocationSpeed = 10
+    static var speedRecord: CLLocationSpeed = 10
+    
+    static let prepareSeconds = 3
 }

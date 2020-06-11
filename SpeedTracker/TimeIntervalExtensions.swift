@@ -34,8 +34,8 @@ extension TimeInterval {
     }
 
     func getMilliSecText() -> String {
-        let ms = Int(truncatingRemainder(dividingBy: 1) * 1000)
-        var msText = "000"
+        let ms = Int(truncatingRemainder(dividingBy: 1) * 100)
+        var msText = "00"
         if ms > 0 {
             msText = String(ms)
         }
@@ -43,8 +43,8 @@ extension TimeInterval {
     }
 
     func getFullTimeText() -> String {
-        let ms = Int(truncatingRemainder(dividingBy: 1) * 1000)
-        var msText = "000"
+        let ms = Int(truncatingRemainder(dividingBy: 1) * 100)
+        var msText = "00"
         if ms > 0 {
             msText = String(ms)
         }
@@ -52,6 +52,6 @@ extension TimeInterval {
         formatter.unitsStyle = .positional
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.zeroFormattingBehavior = [.pad]
-        return formatter.string(from: self)! + ":\(ms)"
+        return formatter.string(from: self)! + ":\(msText)"
     }
 }
