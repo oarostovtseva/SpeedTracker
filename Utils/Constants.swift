@@ -17,8 +17,4 @@ struct K {
 
     static let resultNibName = "ResultCell"
     static let reusableCellIdentifier = "ReusableCell"
-
-    static var speedRecord: CLLocationSpeed = 10
-    
-    static let prepareSeconds = 3
 }

@@ -21,6 +21,8 @@ class SpeedManager {
     
     private var timer = Timer()
     
+    private let userSettings = UserSettings()
+    
     func start() {
         startDriveTime = NSDate().timeIntervalSince1970
         timer = Timer.scheduledTimer(withTimeInterval: K.tenMs, repeats: true) { _ in
@@ -52,7 +54,7 @@ class SpeedManager {
              prevSpeedRecord = speed
              return
          } */
-        if (speed - prevSpeedRecord) >= K.speedRecord, !isZeroSpeed {
+        if (speed - prevSpeedRecord) >= userSettings.get, !isZeroSpeed {
             print("Yay, we got a record! speed:\(speed), prevSpeed:\(prevSpeedRecord)")
             addSpeedResult(speedResult: speed)
             prevSpeedRecord = speed
